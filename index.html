@@ -14,11 +14,14 @@
 
 		<div class="col2">
 			<h1 class="quiz-title">Magic Cards Symbol Quiz</h1>
-			<h3 class="quiz-rules">Select the name of the set that corresponds to the symbol shown below</h3>
+			<h3 class="quiz-rules">Select the name of the expansion set that corresponds to the symbol shown below</h3>
 			<div class="quiz-image"></div>
+			<div class="counter-wrapper">
+					<div class="individual-questions">What Expansion Set Does the Symbol Above Belong To?</div>
+					<div class="question-counter">Question Number:<span class="badge">1</span></div>
 			
-			<div class="individual-questions">What Expansion Set Does the Symbol Above Belong To?</div>
-			<div class="counter">Question Number:<span class="badge">1</span></div>
+			<div class="answer-counter">Questions Answered Correctly:<span class="badge">0</span></div>
+			</div>
 			<div class="answer-wrapper">
 				<label class="answer-1"><input type="radio"  class = "radio-button" name="answerchoice" value="0" /> Answer 1</label>
 				<label class="answer-2"><input type="radio" class = "radio-button" name="answerchoice" value="1" /> Answer 2</label>
@@ -28,7 +31,10 @@
 			<div class="button-wrapper">
 				<input type="submit" class="quiz-button" value="Submit Answer"></input>
 			</div>
-			<div class="feedback-section">Feedback Goes Here!</div>
+			<div class="feedback-section">
+				<p id="initial-feedback">"Correct or Incorrect Feedback Goes Here</p>
+				<p id="correct-answer-feedback">Answer Explanation Goes Here</p>
+			</div>
 			<p class="disclaimer">Images provided by Wizards of the Coast</p>
 
 		</div>

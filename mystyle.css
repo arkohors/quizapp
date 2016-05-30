@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+	letter-spacing: 2px;
 }
 
 h1, h3, p {
@@ -21,7 +23,6 @@ h1, h3, p {
 }*/
 
 .col2 {
-	height: 100%;
 	width: 100%;
 	background-image: url("backgroundart.jpg");
 	background-repeat: no-repeat;
@@ -65,11 +66,24 @@ h1, h3, p {
     color: #ffffff;
 }
 
-.counter{
-	margin: 0 auto;
-    width: 142px;
+.counter-wrapper {
+	text-align: center;
+}
+
+.question-counter{
+	color: #ffffff;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 62px;
+    font-weight: bold;
+}
+
+.answer-counter{
+    width: 243px;
     color: #ffffff;
     margin-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .answer-wrapper {
@@ -105,4 +119,14 @@ label {
 	font-size: 11px;
     text-align: center;
     margin-top: 45px;
+}
+
+#initial-feedback {
+	color:#363837;
+	font-weight: bold;
+}
+
+#correct-answer-feedback {
+	color:#363837;
+	font-weight: bold;
 }
