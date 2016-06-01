@@ -1,7 +1,8 @@
 $(document).ready(function() {
-
-var answerCounter = $("#badge2");
+'use strict';
+var answerCounter = 0;
 var currentQuestion = 0;
+var questionCounter = 1;
 var questions = [
 {
 	question: "1. What expansion set is this symbol from?",
@@ -50,6 +51,7 @@ var questions = [
 		for (var i = 0; i < questions[currentQuestion].answerChoices.length; i++) {
 			$('#choices').append('<input type="radio" name="radioName" value="' + questions[currentQuestion].answerChoices[i] + '" /> ' + questions[currentQuestion].answerChoices[i]);
 			$('#quiz-image').prepend(questions[0].picture[i]);
+
 		}
 	}
 
@@ -61,17 +63,26 @@ var questions = [
         $('#choices').empty();
         $('#quiz-image').empty();
         $('#correct-answer-feedback').empty();
+        questionCounter++;
+        $('.badge2').text(questionCounter);
         genq();
 		if (selectedRadio === correctAnswer) {
-			alert('Answer is correct!');
 			$('#initial-feedback').text("Correct");
 			$('#correct-answer-feedback').append(questions[currentQuestion].feedback);
 			answerCounter++;
+    		$('.badge').text(answerCounter);
+			
 		}
 		else {
-			alert('Answer is incorect');
 			$('#initial-feedback').text("Incorrect");
-			$('#correct-answer-feedback').append(questions[currentQuestion].feedback);	
+			$('#correct-answer-feedback').append(questions[currentQuestion].feedback);		
+		}
+		if (currentQuestion >= 4) {
+			$('.individual-questions').hide();
+        	$('#choices').hide();
+        	$('#quiz-image').hide();
+        	$('#correct-answer-feedback').hide();
+        	$('.finished').show();
 		}
 	});
 });
