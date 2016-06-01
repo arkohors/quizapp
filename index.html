@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<meta charset="UTF-8">
 	<title>Magic Cards Symbols Quiz</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="questions.js"></script>
 </head>
 <body>
 
@@ -15,25 +17,21 @@
 		<div class="col2">
 			<h1 class="quiz-title">Magic Cards Symbol Quiz</h1>
 			<h3 class="quiz-rules">Select the name of the expansion set that corresponds to the symbol shown below</h3>
-			<div class="quiz-image"></div>
+			<div id="quiz-image"></div>
 			<div class="counter-wrapper">
-					<div class="individual-questions">What Expansion Set Does the Symbol Above Belong To?</div>
+					<div class="individual-questions"></div>
 					<div class="question-counter">Question Number:<span class="badge">1</span></div>
 			
-			<div class="answer-counter">Questions Answered Correctly:<span class="badge">0</span></div>
+			<div class="answer-counter">Questions Answered Correctly:<span id="badge2">0</span></div>
 			</div>
-			<div class="answer-wrapper">
-				<label class="answer-1"><input type="radio"  class = "radio-button" name="answerchoice" value="0" /> Answer 1</label>
-				<label class="answer-2"><input type="radio" class = "radio-button" name="answerchoice" value="1" /> Answer 2</label>
-				<label class="answer-3"><input type="radio" class = "radio-button" name="answerchoice" value="2" /> Answer 3</label>
-				<label class="answer-4"><input type="radio" class = "radio-button" name="answerchoice" value="3" /> Answer 4</label>
-			</div>
+			<form id="choices"></form>
 			<div class="button-wrapper">
 				<input type="submit" class="quiz-button" value="Submit Answer"></input>
 			</div>
 			<div class="feedback-section">
-				<p id="initial-feedback">"Correct or Incorrect Feedback Goes Here</p>
-				<p id="correct-answer-feedback">Answer Explanation Goes Here</p>
+				<p id="initial-feedback"></p>
+				<p id="correct-answer-feedback"></p>
+				<p class="finished">Congratulations, you finished the quiz!</p>
 			</div>
 			<p class="disclaimer">Images provided by Wizards of the Coast</p>
 

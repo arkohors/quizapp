@@ -48,12 +48,10 @@ h1, h3, p {
 	text-align: center;
 }
 
-.quiz-image {
-	border: solid black 2px;
+#quiz-image {
 	height: 198px;
 	width: 300px;
 	margin: 0 auto;
-	background-image: url("ARB_symbol.png");
 	background-size: 100% 100%;
 }
 
@@ -86,9 +84,10 @@ h1, h3, p {
     font-weight: bold;
 }
 
-.answer-wrapper {
+#choices {
 	border: solid black 2px;
-	width: 500px;
+	border-radius: 18px;
+	width: 650px;
     margin: 0 auto;
 }
 
@@ -108,8 +107,9 @@ label {
 
 .feedback-section {
 	border: solid black 2px;
+	border-radius: 18px;
 	width: 500px;
-	height: 80px;
+	height: 90px;
 	margin: 0 auto;
 	margin-top: 10px;
 	text-align: center;
@@ -129,4 +129,12 @@ label {
 #correct-answer-feedback {
 	color:#363837;
 	font-weight: bold;
+}
+
+.finished {
+	color:#363837;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: -10px; 
+	display: none;
 }
